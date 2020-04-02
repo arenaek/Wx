@@ -288,7 +288,7 @@ def precipSummaryPlot(df):
     sns.despine()
     
     plotStationName = df['Locale'][0] + '_' + str(df['LoggerID'][0]) + '_'
-    plt.savefig('Z:/JFSP_2015/Weather Stations/Data/Vis/Summary/' + plotStationName + 'P_Summary.tif')
+    plt.savefig('Y:/Weather Stations/Data/Vis/Summary/' + plotStationName + 'P_Summary.tif')
     plt.close()
 
 def tempSummaryPlot(df):
@@ -330,7 +330,7 @@ def tempSummaryPlot(df):
     plt.tight_layout()
     
     plotStationName = df['Locale'][0] + '_' + str(df['LoggerID'][0]) + '_'
-    plt.savefig('Z:/JFSP_2015/Weather Stations/Data/Vis/Summary/' + plotStationName + 'TMP_Summary.tif')
+    plt.savefig('Y:/Weather Stations/Data/Vis/Summary/' + plotStationName + 'TMP_Summary.tif')
     plt.close()
     
 def VWCSummaryPlot(df):
@@ -385,5 +385,5 @@ def VWCSummaryPlot(df):
     plt.tight_layout()
 
     plotStationName = df['Locale'][0] + '_' + str(df['LoggerID'][0]) + '_'
-    plt.savefig('Z:/JFSP_2015/Weather Stations/Data/Vis/Summary/' + plotStationName + 'VWC_Summary.tif')
+    plt.savefig('Y:/Weather Stations/Data/Vis/Summary/' + plotStationName + 'VWC_Summary.tif')
     plt.close()
