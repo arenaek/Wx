@@ -115,7 +115,7 @@ def rawSummaryPlots(df, outDir):
 
     # Create the file name and save the figure
     plotStationName = df['Locale'][0] + '_' + str(df['LoggerID'][0]) + '_'
-    plt.savefig(outDir + '/stationTS/' + plotStationName + 'RawSummary.tif')
+    plt.savefig(outDir + 'stationTS/' + plotStationName + 'RawSummary.tif')
     plt.close()
     
 # plotWindRose:
@@ -137,7 +137,7 @@ def plotWindRose(df, outDir):
     ax.set_xlabel(df['Locale'][0] + ' ' + str(df['LoggerID'][0]), fontsize = 18)
     
     plotStationName = df['Locale'][0] + '_' + str(df['LoggerID'][0]) + '_'
-    plt.savefig(outDir + '/stationTS/' + plotStationName + 'Windrose.tif', 
+    plt.savefig(outDir + 'stationTS/' + plotStationName + 'Windrose.tif', 
                 bbox_extra_artists=(lgd,), bbox_inches='tight')
     plt.close()
 
@@ -202,7 +202,7 @@ def cleanVWC(df, outDir):
     sns.despine()
     
     plotStationName = df['Locale'][0] + '_' + str(df['LoggerID'][0]) + '_'
-    plt.savefig(outDir + '/QAQC/' + plotStationName + 'VWC_Filt.tif')
+    plt.savefig(outDir + 'QAQC/' + plotStationName + 'VWC_Filt.tif')
     plt.close()
     return df
 
@@ -264,7 +264,7 @@ def cleanTMP(df, outDir):
     sns.despine()
     
     plotStationName = df['Locale'][0] + '_' + str(df['LoggerID'][0]) + '_'
-    plt.savefig(outDir + '/QAQC/' + plotStationName + 'TMP_Filt.tif')
+    plt.savefig(outDir + 'QAQC/' + plotStationName + 'TMP_Filt.tif')
     plt.close()
     return df
 
