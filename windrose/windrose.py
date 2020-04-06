@@ -165,21 +165,21 @@ class WindroseAxes(PolarAxes):
             return handles
 
         def get_labels():
-		labels = np.copy(self._info['bins'])
-		labels = ["%.1f : %0.1f" %(labels[i], labels[i+1]-0.1) \
-		for i in range(len(labels)-1)]
-		return labels
+	    labels = np.copy(self._info['bins'])
+	    labels = ["%.1f : %0.1f" %(labels[i], labels[i+1]-0.1) \
+	    for i in range(len(labels)-1)]
+	    return labels
 
-        	kwargs.pop('labels', None)
-        	kwargs.pop('handles', None)
-        	handles = get_handles()
-        	labels = get_labels()
-        	self.legend_ = mpl.legend.Legend(self, handles, labels, loc, **kwargs)
-        	return self.legend_
+            kwargs.pop('labels', None)
+            kwargs.pop('handles', None)
+            handles = get_handles()
+            labels = get_labels()
+            self.legend_ = mpl.legend.Legend(self, handles, labels, loc, **kwargs)
+            return self.legend_
 
     def set_legend(self):
-		l = self.legend(borderaxespad=-0.10)
-		plt.setp(l.get_texts(), fontsize=12)
+	l = self.legend(borderaxespad=-0.10)
+	plt.setp(l.get_texts(), fontsize=12)
 
     def _init_plot(self, direction, var, **kwargs):
         """
