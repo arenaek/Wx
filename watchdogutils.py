@@ -137,7 +137,7 @@ def plotWindRose(df, outDir):
     ax.set_xlabel(df['Locale'][0] + ' ' + str(df['LoggerID'][0]), fontsize = 18)
     
     plotStationName = df['Locale'][0] + '_' + str(df['LoggerID'][0]) + '_'
-    plt.savefig(outDir + 'stationTS/' + plotStationName + 'Windrose.tif', bbox_extra_artists=(lgd,), bbox_inches='tight')
+    plt.savefig(outDir + 'stationTS/' + plotStationName + 'Windrose.tif')
     plt.close()
 
 
