@@ -106,8 +106,7 @@ class WindroseAxes(PolarAxes):
         radii = np.linspace(0.1, self.get_rmax(), 6)
         radii_labels = [ "%.1f" %r for r in radii ]
         radii_labels[0] = "" #Removing label 0
-        self.set_rgrids(radii=radii, labels=radii_labels,
-                               angle=self.radii_angle, **kwargs)
+        self.set_rgrids(radii=radii, labels=radii_labels, angle=self.radii_angle, **kwargs)
 
 
     def _update(self):
@@ -160,8 +159,7 @@ class WindroseAxes(PolarAxes):
                     color = p.get_color()
                 else:
                     raise AttributeError("Can't handle patches")
-                handles.append(mpl.patches.Rectangle((0, 0), 0.2, 0.2,
-                    facecolor=color, edgecolor='black'))
+                handles.append(mpl.patches.Rectangle((0, 0), 0.2, 0.2, facecolor=color, edgecolor='black'))
             return handles
 
         def get_labels():
@@ -260,8 +258,7 @@ class WindroseAxes(PolarAxes):
 
         """
 
-        bins, nbins, nsector, colors, angles, kwargs = self._init_plot(direction, var,
-                                                                       **kwargs)
+        bins, nbins, nsector, colors, angles, kwargs = self._init_plot(direction, var, **kwargs)
 
         #closing lines
         angles = np.hstack((angles, angles[-1]-2*np.pi/nsector))
